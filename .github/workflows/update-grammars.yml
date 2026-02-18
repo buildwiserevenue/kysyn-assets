@@ -1,8 +1,8 @@
-name: Smart Build 100+ Grammars
+name: Resilient Build 100+ Grammars
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # Controlla aggiornamenti ogni notte
+    - cron: '0 0 * * *'
 
 permissions:
   contents: write
@@ -25,26 +25,19 @@ jobs:
         uses: mymindstorm/setup-emsdk@v14
         with: { version: 3.1.64 }
 
-      - name: Cache WASI SDK
+      # --- NOVITÀ: CACHE PER NON RISCARICARE OGNI VOLTA ---
+      - name: Cache Tree-sitter WASI SDK
         uses: actions/cache@v4
         with:
-          path: /home/runner/.cache/tree-sitter/wasi-sdk
-          key: wasi-sdk-29
-          
-      - name: Cache Emscripten
-        uses: actions/cache@v4
-        with:
-          path: emsdk-cache
-          key: emsdk-3.1.64
+          path: /home/runner/.cache/tree-sitter
+          key: tree-sitter-wasi-v29
 
       - name: Build Loop
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p grammars
-          # Crea il file delle versioni se non esiste
           [ -f versions.json ] || echo "{}" > versions.json
-          
           sed -i 's/\r//' languages.txt
 
           grep -v '^#' languages.txt | while read -r repo_entry; do
@@ -60,24 +53,28 @@ jobs:
               lang_name=$(basename "$base_repo" | sed 's/tree-sitter-//')
             fi
 
+            echo "--------------------------------------------"
             echo "🔍 Checking $lang_name ($base_repo)..."
 
-            # 1. Ottieni l'ultimo SHA del commit remoto
-            REMOTE_SHA=$(gh api repos/$base_repo/commits/HEAD --template '{{.sha}}')
-            # 2. Ottieni lo SHA salvato localmente
-            LOCAL_SHA=$(jq -r ".\"$lang_name\"" versions.json)
-
-            # 3. Controlla se dobbiamo compilare
-            if [ "$REMOTE_SHA" == "$LOCAL_SHA" ] && [ -f "grammars/$lang_name.wasm" ]; then
-              echo "⏭️ $lang_name è già aggiornato. Skip."
+            # Protezione 404: se gh api fallisce, REMOTE_SHA diventa "ERROR"
+            REMOTE_SHA=$(gh api repos/$base_repo/commits/HEAD --template '{{.sha}}' 2>/dev/null || echo "ERROR")
+            
+            if [ "$REMOTE_SHA" == "ERROR" ]; then
+              echo "⚠️ Repo non trovato o errore API per $base_repo. Salto."
               continue
             fi
 
-            echo "🏗️ Building $lang_name (New commit: ${REMOTE_SHA:0:7})"
+            LOCAL_SHA=$(jq -r ".\"$lang_name\"" versions.json)
 
+            if [ "$REMOTE_SHA" == "$LOCAL_SHA" ] && [ -f "grammars/$lang_name.wasm" ]; then
+              echo "⏭️ $lang_name già aggiornato."
+              continue
+            fi
+
+            echo "🏗️ Building $lang_name..."
             rm -rf temp_repo
-            if ! gh repo clone "$base_repo" temp_repo -- --depth 1; then
-              echo "❌ Clone failed for $base_repo"
+            if ! gh repo clone "$base_repo" temp_repo -- --depth 1 2>/dev/null; then
+              echo "❌ Clone failed per $base_repo"
               continue
             fi
             
@@ -88,13 +85,13 @@ jobs:
               generated_wasm=$(find . -maxdepth 1 -name "*.wasm" | head -n 1)
               if [ -n "$generated_wasm" ]; then
                 mv "$generated_wasm" "$GITHUB_WORKSPACE/grammars/$lang_name.wasm"
-                # Aggiorna lo SHA nel file versions.json
                 cd "$GITHUB_WORKSPACE"
+                # Aggiorna il JSON immediatamente in memoria
                 jq ".\"$lang_name\" = \"$REMOTE_SHA\"" versions.json > tmp.json && mv tmp.json versions.json
                 echo "✅ Success: $lang_name"
               fi
             else
-              echo "❌ Build failed for $lang_name"
+              echo "❌ Build failed per $lang_name"
             fi
             
             cd "$GITHUB_WORKSPACE"
@@ -102,8 +99,10 @@ jobs:
             sleep 1
           done
 
+      # --- NOVITÀ: SALVA ANCHE SE CI SONO STATI ERRORI PARZIALI ---
       - name: Commit Results
+        if: always() # Esegue questo step anche se il loop ha avuto dei "continue" o errori
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "🤖 Smart Update: WASM grammars and versions"
+          commit_message: "🤖 Smart Update: Progressi build WASM"
           file_pattern: 'grammars/*.wasm versions.json'

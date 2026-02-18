@@ -12,7 +12,7 @@ tree-sitter/tree-sitter-ruby
 tree-sitter/tree-sitter-php:php
 tree-sitter/tree-sitter-swift
 fwcd/tree-sitter-kotlin
-User1342/tree-sitter-dart
+ast-grep/tree-sitter-dar
 jsh9/tree-sitter-objc
 tree-sitter/tree-sitter-bash
 camdencheek/tree-sitter-dockerfile
@@ -37,8 +37,8 @@ tree-sitter-grammars/tree-sitter-astro
 tree-sitter-grammars/tree-sitter-heex
 tree-sitter-grammars/tree-sitter-eex
 tree-sitter-grammars/tree-sitter-graphql
-tree-sitter/tree-sitter-elixir
-tree-sitter/tree-sitter-lua
+elixir-lang/tree-sitter-elixir
+MunifTanjim/tree-sitter-lua
 tree-sitter/tree-sitter-perl
 tree-sitter/tree-sitter-r
 tree-sitter/tree-sitter-scala
