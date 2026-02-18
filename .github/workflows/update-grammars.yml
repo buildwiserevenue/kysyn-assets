@@ -96,7 +96,7 @@ jobs:
             
             cd "$GITHUB_WORKSPACE"
             rm -rf temp_repo
-            sleep 1
+            sleep 2
           done
 
       # --- NOVITÀ: SALVA ANCHE SE CI SONO STATI ERRORI PARZIALI ---
