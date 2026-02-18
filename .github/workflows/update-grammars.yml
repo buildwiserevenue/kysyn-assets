@@ -1,8 +1,8 @@
-name: Build 100+ Grammars
+name: Smart Build 100+ Grammars
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 1 * *'
+    - cron: '0 0 * * *' # Controlla aggiornamenti ogni notte
 
 permissions:
   contents: write
@@ -30,16 +30,14 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p grammars
+          # Crea il file delle versioni se non esiste
+          [ -f versions.json ] || echo "{}" > versions.json
           
-          # Pulizia: rimuove caratteri speciali invisibili (ritorni a capo Windows)
           sed -i 's/\r//' languages.txt
 
           grep -v '^#' languages.txt | while read -r repo_entry; do
             [ -z "$repo_entry" ] && continue
             
-            echo "--------------------------------------------"
-            
-            # Gestione sottocartelle (es. typescript:typescript)
             if [[ "$repo_entry" == *":"* ]]; then
               base_repo="${repo_entry%%:*}"
               subdir="${repo_entry##*:}"
@@ -50,9 +48,21 @@ jobs:
               lang_name=$(basename "$base_repo" | sed 's/tree-sitter-//')
             fi
 
-            echo "🏗️ Building: $lang_name from $base_repo"
+            echo "🔍 Checking $lang_name ($base_repo)..."
 
-            # CLONE USANDO GH CLI (Più stabile contro i blocchi)
+            # 1. Ottieni l'ultimo SHA del commit remoto
+            REMOTE_SHA=$(gh api repos/$base_repo/commits/HEAD --template '{{.sha}}')
+            # 2. Ottieni lo SHA salvato localmente
+            LOCAL_SHA=$(jq -r ".\"$lang_name\"" versions.json)
+
+            # 3. Controlla se dobbiamo compilare
+            if [ "$REMOTE_SHA" == "$LOCAL_SHA" ] && [ -f "grammars/$lang_name.wasm" ]; then
+              echo "⏭️ $lang_name è già aggiornato. Skip."
+              continue
+            fi
+
+            echo "🏗️ Building $lang_name (New commit: ${REMOTE_SHA:0:7})"
+
             rm -rf temp_repo
             if ! gh repo clone "$base_repo" temp_repo -- --depth 1; then
               echo "❌ Clone failed for $base_repo"
@@ -62,16 +72,14 @@ jobs:
             cd temp_repo
             [ -n "$subdir" ] && cd "$subdir"
             
-            # COMANDO AGGIORNATO 2024+
-            # Usiamo 'build --wasm' invece del vecchio 'build-wasm'
             if tree-sitter build --wasm; then
-              # Il comando genera un file chiamato 'tree-sitter-[lang].wasm'
               generated_wasm=$(find . -maxdepth 1 -name "*.wasm" | head -n 1)
               if [ -n "$generated_wasm" ]; then
                 mv "$generated_wasm" "$GITHUB_WORKSPACE/grammars/$lang_name.wasm"
+                # Aggiorna lo SHA nel file versions.json
+                cd "$GITHUB_WORKSPACE"
+                jq ".\"$lang_name\" = \"$REMOTE_SHA\"" versions.json > tmp.json && mv tmp.json versions.json
                 echo "✅ Success: $lang_name"
-              else
-                echo "❌ .wasm file not found after build"
               fi
             else
               echo "❌ Build failed for $lang_name"
@@ -79,12 +87,11 @@ jobs:
             
             cd "$GITHUB_WORKSPACE"
             rm -rf temp_repo
-            
-            sleep 2
+            sleep 1
           done
 
       - name: Commit Results
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "🤖 Update 100+ WASM grammars"
-          file_pattern: 'grammars/*.wasm'
+          commit_message: "🤖 Smart Update: WASM grammars and versions"
+          file_pattern: 'grammars/*.wasm versions.json'
