@@ -16,7 +16,6 @@ ast-grep/tree-sitter-dart
 tree-sitter-grammars/tree-sitter-objc
 tree-sitter/tree-sitter-bash
 camdencheek/tree-sitter-dockerfile
-m-novikov/tree-sitter-sql
 tree-sitter-grammars/tree-sitter-hcl
 tree-sitter-grammars/tree-sitter-yaml
 tree-sitter/tree-sitter-json
