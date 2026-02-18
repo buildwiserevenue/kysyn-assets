@@ -1,0 +1,21 @@
+{
+  "python": "26855eabccb19c6abf499fbc5b8dc7cc9ab8bc64",
+  "javascript": "58404d8cf191d69f2674a8fd507bd5776f46cb11",
+  "typescript": "75b3874edb2dc714fb1fd77a32013d0f8699989f",
+  "tsx": "75b3874edb2dc714fb1fd77a32013d0f8699989f",
+  "go": "2346a3ab1bb3857b48b29d779a1ef9799a248cd7",
+  "rust": "261b20226c04ef601adbdf185a800512a5f66291",
+  "java": "e10607b45ff745f5f876bfa3e94fbcc6b44bdc11",
+  "c": "ae19b676b13bdcc13b7665397e6d9b14975473dd",
+  "cpp": "12bd6f7e96080d2e70ec51d4068f2f66120dde35",
+  "c-sharp": "88366631d598ce6595ec655ce1591b315cffb14c",
+  "ruby": "ab6dca77a8184abc94af6e3e82538741b5078d63",
+  "php": "015ce839db5ae9ceda763bf12e071867fbe8cc89",
+  "swift": "db675450dcc1478ee128c96ecc61c13272431aab",
+  "kotlin": "d9d3699a40c1964747368b5322be98e0acfc4fcf",
+  "bash": "a06c2e4415e9bc0346c6b86d401879ffb44058f7",
+  "dockerfile": "971acdd908568b4531b0ba28a445bf0bb720aba5",
+  "hcl": "64ad62785d442eb4d45df3a1764962dafd5bc98b",
+  "json": "001c28d7a29832b06b0e831ec77845553c89b56d",
+  "toml": "8bd2056818b21860e3d756b5a58c4f6e05fb744e"
+}
