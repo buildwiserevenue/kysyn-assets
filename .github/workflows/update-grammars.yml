@@ -73,7 +73,7 @@ jobs:
 
             echo "🏗️ Building $lang_name..."
             rm -rf temp_repo
-            if ! git clone "https://github.com/$base_repo.git" temp_repo --depth 1 2>/dev/null; then
+            if ! git clone --depth 1 --retry 3 "https://github.com/$base_repo.git" temp_repo --depth 1 2>/dev/null; then
               echo "❌ Clone failed per $base_repo"
               continue
             fi
@@ -97,7 +97,7 @@ jobs:
             
             cd "$GITHUB_WORKSPACE"
             rm -rf temp_repo
-            sleep 2
+            sleep 6
           done
 
       # --- 4. COMMIT RISULTATI ---
