@@ -24,7 +24,6 @@ tree-sitter-grammars/tree-sitter-xml:xml
 alemuller/tree-sitter-make
 uyha/tree-sitter-cmake
 opa-oz/tree-sitter-nginx
-MichaHoffmann/tree-sitter-terraform
 mitchellh/tree-sitter-proto
 airbus-cert/tree-sitter-powershell
 nverno/tree-sitter-jq
@@ -105,3 +104,10 @@ Fv0/tree-sitter-pinescript
 gaplo917/tree-sitter-mql
 JoranHonig/tree-sitter-solidity
 Isolate-B/tree-sitter-pascal
+m-p-l/tree-sitter-jcl
+jbearak/tree-sitter-stata
+insidewhy/tree-sitter-autohotkey2
+alfredomtx/tree-sitter-autohotkey
+tree-sitter-grammars/tree-sitter-xml
+microsoft/vscode-tree-sitter-wasm
+tree-sitter/tree-sitter.github.io
