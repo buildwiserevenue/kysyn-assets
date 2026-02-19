@@ -24,7 +24,7 @@ tree-sitter-grammars/tree-sitter-xml:xml
 alemuller/tree-sitter-make
 uyha/tree-sitter-cmake
 opa-oz/tree-sitter-nginx
-MichaHoffmann/tree-sitter-hcl:terraform
+MichaHoffmann/tree-sitter-terraform
 mitchellh/tree-sitter-proto
 airbus-cert/tree-sitter-powershell
 nverno/tree-sitter-jq
