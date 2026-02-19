@@ -88,7 +88,6 @@ tree-sitter-grammars/tree-sitter-tcl
 Beaglefoot/tree-sitter-awk
 jbearak/tree-sitter-stata
 alfredomtx/tree-sitter-autohotkey
-alemuller/tree-sitter-vhdl
 tree-sitter/tree-sitter-verilog
 jpt13653903/tree-sitter-vhdl
 briot/tree-sitter-ada
