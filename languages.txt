@@ -59,7 +59,7 @@ tree-sitter-grammars/tree-sitter-markdown:tree-sitter-markdown
 tree-sitter-grammars/tree-sitter-markdown:tree-sitter-markdown-inline
 latex-lsp/tree-sitter-latex
 tree-sitter/tree-sitter-regex
-cathaysia/tree-sitter-asciidoc
+cathaysia/tree-sitter-asciidoc:tree-sitter-asciidoc
 latex-lsp/tree-sitter-bibtex
 milisims/tree-sitter-org
 #benwilliamgraham/tree-sitter-llvm
@@ -75,7 +75,7 @@ PrestonKnopp/tree-sitter-gdscript
 vantreeseba/tree-sitter-haxe
 mkoval1/tree-sitter-abap
 Isopod/tree-sitter-pascal
-cfmleditor/tree-sitter-cfml:cfml
+cfmleditor/tree-sitter-cfml:cfscript
 AlexanderBrevig/tree-sitter-forth
 gmlarumbe/tree-sitter-systemverilog
 madskjeldgaard/tree-sitter-supercollider
@@ -86,7 +86,10 @@ nix-community/tree-sitter-nix
 6cdh/tree-sitter-racket
 tree-sitter-grammars/tree-sitter-tcl
 Beaglefoot/tree-sitter-awk
-Fv0/tree-sitter-pinescript
-mskelton/tree-sitter-mql5
 jbearak/tree-sitter-stata
 alfredomtx/tree-sitter-autohotkey
+alemuller/tree-sitter-vhdl
+tree-sitter/tree-sitter-verilog
+jpt13653903/tree-sitter-vhdl
+briot/tree-sitter-ada
+acristoffers/tree-sitter-matlab
