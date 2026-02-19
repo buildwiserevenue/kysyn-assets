@@ -41,10 +41,10 @@ jobs:
           [ -f versions.json ] || echo "{}" > versions.json
           sed -i 's/\r$//' languages.txt
           
-          SUCCESS=0
-          FAILED=0
+          echo "0" > /tmp/success_count
+          echo "0" > /tmp/failed_count
           
-          while read -r repo_entry; do
+          grep -v '^#' languages.txt | while read -r repo_entry; do
             [ -z "$repo_entry" ] && continue
             
             if [[ "$repo_entry" == *":"* ]]; then
@@ -61,8 +61,8 @@ jobs:
             REMOTE_SHA=$(gh api repos/$base_repo/commits/HEAD --template '{{.sha}}' 2>/dev/null || echo "ERROR")
             
             if [ "$REMOTE_SHA" == "ERROR" ]; then
-              echo "⚠️ Repo non accessibile: $base_repo"
-              ((FAILED++))
+              echo "⚠️ Repo non accessibile"
+              echo $(($(cat /tmp/failed_count) + 1)) > /tmp/failed_count
               continue
             fi
             
@@ -76,7 +76,7 @@ jobs:
             rm -rf temp_repo
             if ! timeout 60 git clone --depth 1 "https://github.com/$base_repo.git" temp_repo 2>/dev/null; then
               echo "❌ Clone fallito"
-              ((FAILED++))
+              echo $(($(cat /tmp/failed_count) + 1)) > /tmp/failed_count
               continue
             fi
             
@@ -84,27 +84,30 @@ jobs:
             [ -n "$subdir" ] && cd "$subdir"
             
             tree-sitter generate 2>/dev/null || true
-            if timeout 180 tree-sitter build --wasm; then
+            if timeout 180 tree-sitter build --wasm 2>/dev/null; then
               generated_wasm=$(find . -name "*.wasm" -maxdepth 1 | head -n 1)
               if [ -n "$generated_wasm" ]; then
                 mv "$generated_wasm" "$GITHUB_WORKSPACE/grammars/$lang_name.wasm"
                 cd "$GITHUB_WORKSPACE"
                 jq ".\"$lang_name\" = \"$REMOTE_SHA\"" versions.json > tmp.json && mv tmp.json versions.json
                 echo "✅ $lang_name"
-                ((SUCCESS++))
+                echo $(($(cat /tmp/success_count) + 1)) > /tmp/success_count
+              else
+                echo "❌ WASM non trovato"
+                echo $(($(cat /tmp/failed_count) + 1)) > /tmp/failed_count
               fi
             else
               echo "❌ Build fallito"
-              ((FAILED++))
+              echo $(($(cat /tmp/failed_count) + 1)) > /tmp/failed_count
             fi
             
             cd "$GITHUB_WORKSPACE"
             rm -rf temp_repo
             sleep 2
-          done < <(grep -v '^#' languages.txt)
+          done
           
-          echo "SUCCESS=$SUCCESS" >> $GITHUB_ENV
-          echo "FAILED=$FAILED" >> $GITHUB_ENV
+          echo "SUCCESS=$(cat /tmp/success_count)" >> $GITHUB_ENV
+          echo "FAILED=$(cat /tmp/failed_count)" >> $GITHUB_ENV
           
       - name: Commit Results
         if: success()
