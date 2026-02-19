@@ -48,8 +48,8 @@ tree-sitter/tree-sitter-ocaml:grammars/ocaml
 tree-sitter/tree-sitter-ocaml:grammars/interface
 maxxnino/tree-sitter-zig
 alaviss/tree-sitter-nim
-v-analyzer/tree-sitter-v
-tree-sitter-grammars/tree-sitter-solidity
+nedpals/tree-sitter-v
+JoranHonig/tree-sitter-solidity
 tree-sitter/tree-sitter-julia
 yutaro-sakamoto/tree-sitter-cobol
 stadelmanma/tree-sitter-fortran
@@ -60,10 +60,10 @@ tree-sitter-grammars/tree-sitter-markdown:tree-sitter-markdown
 tree-sitter-grammars/tree-sitter-markdown:tree-sitter-markdown-inline
 latex-lsp/tree-sitter-latex
 tree-sitter/tree-sitter-regex
-cathaysia/tree-sitter-asciidoc
+tree-sitter-grammars/tree-sitter-asciidoc
 latex-lsp/tree-sitter-bibtex
 milisims/tree-sitter-org
-benwilliamgraham/tree-sitter-llvm
+#benwilliamgraham/tree-sitter-llvm
 tree-sitter-grammars/tree-sitter-glsl
 tree-sitter-grammars/tree-sitter-hlsl
 victorhqc/tree-sitter-prisma
