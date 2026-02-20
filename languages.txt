@@ -92,3 +92,12 @@ tree-sitter/tree-sitter-verilog
 jpt13653903/tree-sitter-vhdl
 briot/tree-sitter-ada
 acristoffers/tree-sitter-matlab
+tree-sitter-grammars/tree-sitter-scss
+murtaza64/tree-sitter-groovy
+ionide/tree-sitter-fsharp:fsharp
+justinmk/tree-sitter-ini
+dbt-labs/tree-sitter-jinja2
+uben0/tree-sitter-typst
+tree-sitter-grammars/tree-sitter-csv
+tree-sitter-grammars/tree-sitter-bicep
+Rukiza/tree-sitter-prolog
