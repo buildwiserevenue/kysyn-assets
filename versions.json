@@ -77,7 +77,7 @@
   "cfscript": "6bb7e74437769b05f56b5a05f80efd8f31034e56",
   "forth": "360ef13f8c609ec6d2e80782af69958b84e36cd0",
   "systemverilog": "7c4b01b7df2f6e7fa1f698c9d30ac8f93af18ed2",
-  "supercollider": "76b3cab1773f08bb7d3a185420b0a44c6da8c294",
+  "supercollider": "9bb316d1e6e4569331ff1206efe009cadedda619",
   "reason": "0226cfecaa2257d56d7c3f364f789cba042e403f",
   "rescript": "43c2f1f35024918d415dc933d4cc534d6419fedf",
   "crystal": "50ca9e6fcfb16a2cbcad59203cfd8ad650e25c49",
@@ -90,5 +90,13 @@
   "verilog": "227d277b6a1a5e2bf818d6206935722a7503de08",
   "vhdl": "674ed9fe6c13c79c0e7407daaf4518d053e6f0f4",
   "ada": "6b58259a08b1a22ba0247a7ce30be384db618da6",
-  "matlab": "574dde565caddf8cf44eec7df3cb89eb96053ed7"
+  "matlab": "574dde565caddf8cf44eec7df3cb89eb96053ed7",
+  "scss": "bca847c1410f7dd97e13fbe7838b3c2c203fb473",
+  "groovy": "86911590a8e46d71301c66468e5620d9faa5b6af",
+  "fsharp": "5141851c278a99958469eb1736c7afc4ec738e47",
+  "ini": "e4018b5176132b4f3c5d6e61cea383f42288d0f5",
+  "jinja2": "a82ed374f4cb58a1358dd6b26a7157bde1bca3b7",
+  "typst": "46cf4ded12ee974a70bf8457263b67ad7ee0379d",
+  "bicep": "bff59884307c0ab009bd5e81afd9324b46a6c0f9",
+  "prolog": "c246cf2bf36590a3cb4de380205376d3c46208e8"
 }
