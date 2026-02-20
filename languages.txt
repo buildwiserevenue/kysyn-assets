@@ -11,6 +11,7 @@ tree-sitter/tree-sitter-c-sharp
 tree-sitter/tree-sitter-ruby
 tree-sitter/tree-sitter-php:php
 tree-sitter/tree-sitter-swift
+#m-novikov/tree-sitter-sql.git
 fwcd/tree-sitter-kotlin
 ast-grep/tree-sitter-dart
 tree-sitter-grammars/tree-sitter-objc
