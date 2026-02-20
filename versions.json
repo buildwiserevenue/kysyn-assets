@@ -1,2 +1,10 @@
 {
+  "python": "26855eabccb19c6abf499fbc5b8dc7cc9ab8bc64",
+  "javascript": "58404d8cf191d69f2674a8fd507bd5776f46cb11",
+  "typescript": "75b3874edb2dc714fb1fd77a32013d0f8699989f",
+  "tsx": "75b3874edb2dc714fb1fd77a32013d0f8699989f",
+  "go": "2346a3ab1bb3857b48b29d779a1ef9799a248cd7",
+  "rust": "261b20226c04ef601adbdf185a800512a5f66291",
+  "java": "e10607b45ff745f5f876bfa3e94fbcc6b44bdc11",
+  "c": "ae19b676b13bdcc13b7665397e6d9b14975473dd"
 }
