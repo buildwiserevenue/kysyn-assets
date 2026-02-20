@@ -98,5 +98,8 @@
   "jinja2": "a82ed374f4cb58a1358dd6b26a7157bde1bca3b7",
   "typst": "46cf4ded12ee974a70bf8457263b67ad7ee0379d",
   "bicep": "bff59884307c0ab009bd5e81afd9324b46a6c0f9",
-  "prolog": "c246cf2bf36590a3cb4de380205376d3c46208e8"
+  "prolog": "c246cf2bf36590a3cb4de380205376d3c46208e8",
+  "csv": "f6bf6e35eb0b95fbadea4bb39cb9709507fcb181",
+  "tsv": "f6bf6e35eb0b95fbadea4bb39cb9709507fcb181",
+  "psv": "f6bf6e35eb0b95fbadea4bb39cb9709507fcb181"
 }
