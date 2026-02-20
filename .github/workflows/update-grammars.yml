@@ -3,8 +3,10 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 0 * * *'
+
 permissions:
   contents: write
+
 jobs:
   build-all-wasm:
     runs-on: ubuntu-latest
@@ -34,6 +36,8 @@ jobs:
       - name: Build Loop
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Ottimizzazione per dimensione e flessibilità della memoria
+          EMCC_CFLAGS: "-Oz -s ALLOW_MEMORY_GROWTH=1"
         run: |
           [ ! -f languages.txt ] && { echo "❌ languages.txt mancante"; exit 1; }
           
@@ -83,8 +87,11 @@ jobs:
             cd temp_repo
             [ -n "$subdir" ] && cd "$subdir"
             
+            # Genera i file C se non presenti
             tree-sitter generate 2>/dev/null || true
-            if timeout 180 tree-sitter build --wasm 2>/dev/null; then
+            
+            # ⏳ Build con timeout esteso per compensare l'ottimizzazione -Oz
+            if timeout 300 tree-sitter build --wasm 2>/dev/null; then
               generated_wasm=$(find . -name "*.wasm" -maxdepth 1 | head -n 1)
               if [ -n "$generated_wasm" ]; then
                 mv "$generated_wasm" "$GITHUB_WORKSPACE/grammars/$lang_name.wasm"
@@ -108,9 +115,9 @@ jobs:
           
           echo "SUCCESS=$(cat /tmp/success_count)" >> $GITHUB_ENV
           echo "FAILED=$(cat /tmp/failed_count)" >> $GITHUB_ENV
-          
+
       - name: Commit Results
-        if: success()
+        if: always()
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "🤖 Build: ${{ env.SUCCESS }} OK, ${{ env.FAILED }} KO"
