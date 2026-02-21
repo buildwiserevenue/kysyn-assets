@@ -1,0 +1,728 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-02-21T00:29:00Z",
+  "source_url": "https://raw.githubusercontent.com/buildwiserevenue/kysyn-assets/main",
+  "grammars": [
+    {
+      "language": "abap",
+      "filename": "abap.wasm.gz",
+      "compressed_size": 63333,
+      "decompressed_size_estimated": 189999,
+      "sha256": "3b812a1d3f1e93d10d9615a83f69c470797dec1d38c2e0a9c0fe67becb421ef6"
+    },
+    {
+      "language": "ada",
+      "filename": "ada.wasm.gz",
+      "compressed_size": 50558,
+      "decompressed_size_estimated": 151674,
+      "sha256": "726c18f3f9a01920828b5ea4211df1b05312a230cb5c6a8096837af2a451c51a"
+    },
+    {
+      "language": "astro",
+      "filename": "astro.wasm.gz",
+      "compressed_size": 9579,
+      "decompressed_size_estimated": 28737,
+      "sha256": "9bc97fe6e8eb7d35cbb66cd54a666cabb5b460c6825da11547fd4eb5f5996993"
+    },
+    {
+      "language": "autohotkey",
+      "filename": "autohotkey.wasm.gz",
+      "compressed_size": 105751,
+      "decompressed_size_estimated": 317253,
+      "sha256": "2dcd0e96c677d640a3d71e10d1e3c2f8a5aeea370b2d750bece14ea4d9567302"
+    },
+    {
+      "language": "awk",
+      "filename": "awk.wasm.gz",
+      "compressed_size": 68722,
+      "decompressed_size_estimated": 206166,
+      "sha256": "e35ff56adc6219ab8195b0ea516290bb8798284f322c56750006e4a86d8babd8"
+    },
+    {
+      "language": "bash",
+      "filename": "bash.wasm.gz",
+      "compressed_size": 181136,
+      "decompressed_size_estimated": 543408,
+      "sha256": "8c5545f7c62492af0217f5d07385c7029b5a05662dbc7c92a127d4d98e8263b4"
+    },
+    {
+      "language": "bibtex",
+      "filename": "bibtex.wasm.gz",
+      "compressed_size": 4081,
+      "decompressed_size_estimated": 12243,
+      "sha256": "e067691576bba1c021bd3aa80a88bd5e5e76c5a57a50df8b1c427f8bafd21d12"
+    },
+    {
+      "language": "bicep",
+      "filename": "bicep.wasm.gz",
+      "compressed_size": 23901,
+      "decompressed_size_estimated": 71703,
+      "sha256": "d6831f04f3527c8e22a0fa60cd22584ef67f13747cd42eb21e834836bc384e28"
+    },
+    {
+      "language": "c-sharp",
+      "filename": "c-sharp.wasm.gz",
+      "compressed_size": 313742,
+      "decompressed_size_estimated": 941226,
+      "sha256": "1372c97cecf4da1b0748f46c6111c2fdb123c9c05de0193f1a3ff01e3a842930"
+    },
+    {
+      "language": "c",
+      "filename": "c.wasm.gz",
+      "compressed_size": 72432,
+      "decompressed_size_estimated": 217296,
+      "sha256": "5a633aad9258568d65924090f7495092ddbc24a98f8836e40ce16d3b09b22939"
+    },
+    {
+      "language": "cfscript",
+      "filename": "cfscript.wasm.gz",
+      "compressed_size": 80579,
+      "decompressed_size_estimated": 241737,
+      "sha256": "652e389d8830d52200eaddb1c96c31d961b3345b4d72efa37bb4a4f28b0cb3ba"
+    },
+    {
+      "language": "clojure",
+      "filename": "clojure.wasm.gz",
+      "compressed_size": 18288,
+      "decompressed_size_estimated": 54864,
+      "sha256": "09cd5a104daaf1bf02203d29994474a964694bba71e3882dc4113e0b136bed59"
+    },
+    {
+      "language": "cmake",
+      "filename": "cmake.wasm.gz",
+      "compressed_size": 15760,
+      "decompressed_size_estimated": 47280,
+      "sha256": "2fb803f9281a93fac978221d33460795e82186a176795032eeeca55a6ef5602e"
+    },
+    {
+      "language": "commonlisp",
+      "filename": "commonlisp.wasm.gz",
+      "compressed_size": 93264,
+      "decompressed_size_estimated": 279792,
+      "sha256": "6768cfd1bda97dcf96ffa7c560add950547114d862024cdf850cf3c6c3a6b0ca"
+    },
+    {
+      "language": "cpp",
+      "filename": "cpp.wasm.gz",
+      "compressed_size": 409121,
+      "decompressed_size_estimated": 1227363,
+      "sha256": "010fe4b32fca42325d1ebd3e0359a6039086b6963a0a05b32ae0944b512995d2"
+    },
+    {
+      "language": "crystal",
+      "filename": "crystal.wasm.gz",
+      "compressed_size": 509318,
+      "decompressed_size_estimated": 1527954,
+      "sha256": "64bb466b1ebb2d79b7ac82d20ed1b4c2b67d96890c922890d8c9f7be46df8988"
+    },
+    {
+      "language": "css",
+      "filename": "css.wasm.gz",
+      "compressed_size": 21556,
+      "decompressed_size_estimated": 64668,
+      "sha256": "8dd1dc60fc5ef4754ee9563c457ae50194220eb6234d26af5aff1a2972851bf7"
+    },
+    {
+      "language": "csv",
+      "filename": "csv.wasm.gz",
+      "compressed_size": 2503,
+      "decompressed_size_estimated": 7509,
+      "sha256": "2a18a7efbe9b8f0eae135fb16280d6f4caca64dfa79737ebd860f06d2d1d2b93"
+    },
+    {
+      "language": "dart",
+      "filename": "dart.wasm.gz",
+      "compressed_size": 86584,
+      "decompressed_size_estimated": 259752,
+      "sha256": "d3dde675d384adb9381c9cc65dcbe26d9b3ed08d2eac6135dce84d5389f2c8ff"
+    },
+    {
+      "language": "dockerfile",
+      "filename": "dockerfile.wasm.gz",
+      "compressed_size": 17288,
+      "decompressed_size_estimated": 51864,
+      "sha256": "c9389aa0947ceb3ac7272e5d9a920d16456e193dc71f27fbdb14e9a70c59e803"
+    },
+    {
+      "language": "dot",
+      "filename": "dot.wasm.gz",
+      "compressed_size": 8548,
+      "decompressed_size_estimated": 25644,
+      "sha256": "51b63216bda76546e90b216834bc3db2a72d326c6010f1bd31403b3a7582c951"
+    },
+    {
+      "language": "eex",
+      "filename": "eex.wasm.gz",
+      "compressed_size": 2643,
+      "decompressed_size_estimated": 7929,
+      "sha256": "5ee3a199b2e77cbc41a2662d9f36c7cf251d8269a8cda1b642f909a2cb189c69"
+    },
+    {
+      "language": "elixir",
+      "filename": "elixir.wasm.gz",
+      "compressed_size": 152812,
+      "decompressed_size_estimated": 458436,
+      "sha256": "8253d2095486b1e8591c3948372b35e971e6b4bb954f741c7535ba9a1016b2d5"
+    },
+    {
+      "language": "elm",
+      "filename": "elm.wasm.gz",
+      "compressed_size": 37924,
+      "decompressed_size_estimated": 113772,
+      "sha256": "94fc9fd1ed3da5dcb52b0b17f6d64a784ef67de985043c809bc0ef9839681018"
+    },
+    {
+      "language": "erlang",
+      "filename": "erlang.wasm.gz",
+      "compressed_size": 44789,
+      "decompressed_size_estimated": 134367,
+      "sha256": "9cba65852658262f20ab5183f0ce0efee69d0ea29b59ce2c551db09938c1d51d"
+    },
+    {
+      "language": "fish",
+      "filename": "fish.wasm.gz",
+      "compressed_size": 16680,
+      "decompressed_size_estimated": 50040,
+      "sha256": "4fa029d1db0e2263c69aacf9bafda885078e4e445cbbcb0b6a5587adfd638d38"
+    },
+    {
+      "language": "forth",
+      "filename": "forth.wasm.gz",
+      "compressed_size": 13995,
+      "decompressed_size_estimated": 41985,
+      "sha256": "d290850ac91fa3410b5105f2078d34c214d0271289a9ebd3093c303cac984770"
+    },
+    {
+      "language": "fortran",
+      "filename": "fortran.wasm.gz",
+      "compressed_size": 356082,
+      "decompressed_size_estimated": 1068246,
+      "sha256": "415bb1ddaa7183528205d73525e11d51744a2093cc15e32d00d77620fc037d4b"
+    },
+    {
+      "language": "fsharp",
+      "filename": "fsharp.wasm.gz",
+      "compressed_size": 474469,
+      "decompressed_size_estimated": 1423407,
+      "sha256": "11e242701265dc32cc5df135eff8a5c9ddcfdc00386b0cc191245eca9cd9ad3b"
+    },
+    {
+      "language": "gdscript",
+      "filename": "gdscript.wasm.gz",
+      "compressed_size": 41214,
+      "decompressed_size_estimated": 123642,
+      "sha256": "198c27b8d2881d125637b0f3a2d77598cdeaa71b4a15d836742ae32b4f1dd4ce"
+    },
+    {
+      "language": "gitignore",
+      "filename": "gitignore.wasm.gz",
+      "compressed_size": 4294,
+      "decompressed_size_estimated": 12882,
+      "sha256": "9cb036c0e32ce37278189a8d12c0a6e8fa935b74f9fddc8ac280f406f2548386"
+    },
+    {
+      "language": "gleam",
+      "filename": "gleam.wasm.gz",
+      "compressed_size": 57346,
+      "decompressed_size_estimated": 172038,
+      "sha256": "fbb2ffdc3ab85609f9dffedcc391769cfdd31db7d3019b9d4bc44608d8cd6f9e"
+    },
+    {
+      "language": "glsl",
+      "filename": "glsl.wasm.gz",
+      "compressed_size": 87848,
+      "decompressed_size_estimated": 263544,
+      "sha256": "78fce6e28fd6b5f65d4c605c5b820101f982e8b014dfe7debd1492f7ada42db3"
+    },
+    {
+      "language": "go",
+      "filename": "go.wasm.gz",
+      "compressed_size": 37463,
+      "decompressed_size_estimated": 112389,
+      "sha256": "aa1b4c5c80fc3aa0f50f1eb80c8f06ded39adfe26fabcc18b8c6c7f7be9c68bd"
+    },
+    {
+      "language": "graphql",
+      "filename": "graphql.wasm.gz",
+      "compressed_size": 13938,
+      "decompressed_size_estimated": 41814,
+      "sha256": "d4eb4b487f9db7c9354747291c4e3ba7c25d57a818b5ed487236cb69d8fcb652"
+    },
+    {
+      "language": "groovy",
+      "filename": "groovy.wasm.gz",
+      "compressed_size": 89822,
+      "decompressed_size_estimated": 269466,
+      "sha256": "2b6cf1b58572019a3c0f4c618ca50d9dcd7c717415ccdc6d56f8d74ed7265bc6"
+    },
+    {
+      "language": "haskell",
+      "filename": "haskell.wasm.gz",
+      "compressed_size": 289383,
+      "decompressed_size_estimated": 868149,
+      "sha256": "cb7b57a49f261e905961fa5cc486e9385de315cbdd960589949a2ff426d4a667"
+    },
+    {
+      "language": "haxe",
+      "filename": "haxe.wasm.gz",
+      "compressed_size": 79935,
+      "decompressed_size_estimated": 239805,
+      "sha256": "c5fd1711d965ba4ac1eaf9d33ba89c1398842b6306c97c3db9996c68cde71d71"
+    },
+    {
+      "language": "hcl",
+      "filename": "hcl.wasm.gz",
+      "compressed_size": 19830,
+      "decompressed_size_estimated": 59490,
+      "sha256": "0341ea347064bef6d687e6ec11bbfe2797c74f8f77bbdc2cddc53080b16fa111"
+    },
+    {
+      "language": "heex",
+      "filename": "heex.wasm.gz",
+      "compressed_size": 7198,
+      "decompressed_size_estimated": 21594,
+      "sha256": "ed9af4e8b84bfcf755160df216becb4f61ac6decea97d3f3d8e42a358d40d516"
+    },
+    {
+      "language": "hlsl",
+      "filename": "hlsl.wasm.gz",
+      "compressed_size": 308624,
+      "decompressed_size_estimated": 925872,
+      "sha256": "33196841eca17cdbaaf8a38fbe5f68504132ceebcb22df900ac83533260e9223"
+    },
+    {
+      "language": "html",
+      "filename": "html.wasm.gz",
+      "compressed_size": 7281,
+      "decompressed_size_estimated": 21843,
+      "sha256": "e60d69f049227938b4cee2848a3933633ee233563c2e9a43deb6900c59ae159d"
+    },
+    {
+      "language": "ini",
+      "filename": "ini.wasm.gz",
+      "compressed_size": 2101,
+      "decompressed_size_estimated": 6303,
+      "sha256": "f602d6ee4fc0408906920bd663b216ee2ae66a7e54897eeae7381cc8d521c9bd"
+    },
+    {
+      "language": "interface",
+      "filename": "interface.wasm.gz",
+      "compressed_size": 200924,
+      "decompressed_size_estimated": 602772,
+      "sha256": "2d7971c935cf919f65924c4f876a520ec9048ce11934fe2e837288515a29a086"
+    },
+    {
+      "language": "java",
+      "filename": "java.wasm.gz",
+      "compressed_size": 50687,
+      "decompressed_size_estimated": 152061,
+      "sha256": "a74325370dcad3cdedd15c6b2354f35327cfcac4e2a5119af7e00086357079ec"
+    },
+    {
+      "language": "javascript",
+      "filename": "javascript.wasm.gz",
+      "compressed_size": 49746,
+      "decompressed_size_estimated": 149238,
+      "sha256": "95e27d0f5b727b31481a5f67dfd4f7c1491c7e1d742a3713c8cd033866ab30b0"
+    },
+    {
+      "language": "jinja2",
+      "filename": "jinja2.wasm.gz",
+      "compressed_size": 4227,
+      "decompressed_size_estimated": 12681,
+      "sha256": "a046d838ace5f58a909dcc11404a7e5e5fce54d0b9bdaa2e34bfee779e64e584"
+    },
+    {
+      "language": "jq",
+      "filename": "jq.wasm.gz",
+      "compressed_size": 9603,
+      "decompressed_size_estimated": 28809,
+      "sha256": "32c5d9d882b258c966fec2323522554c3618311c0c53a931ad1fd1d85e6c0c9d"
+    },
+    {
+      "language": "json",
+      "filename": "json.wasm.gz",
+      "compressed_size": 2597,
+      "decompressed_size_estimated": 7791,
+      "sha256": "409cbcd02979f76b5d33f066d730314a2ec1eace94a618a071d58482f3e81c73"
+    },
+    {
+      "language": "julia",
+      "filename": "julia.wasm.gz",
+      "compressed_size": 235055,
+      "decompressed_size_estimated": 705165,
+      "sha256": "9935bcdede5390521064e59782cdb54ee94f698e943dae0e52ce39996b06a742"
+    },
+    {
+      "language": "kotlin",
+      "filename": "kotlin.wasm.gz",
+      "compressed_size": 316433,
+      "decompressed_size_estimated": 949299,
+      "sha256": "615dbe2b36576b0200e90d04bca749a90d89e5fcbc9b31791c9592670b3264d2"
+    },
+    {
+      "language": "latex",
+      "filename": "latex.wasm.gz",
+      "compressed_size": 241252,
+      "decompressed_size_estimated": 723756,
+      "sha256": "bde1aac60fa2f3e085deed74e450784a80d1d4cffef3da504db110f548d65839"
+    },
+    {
+      "language": "lua",
+      "filename": "lua.wasm.gz",
+      "compressed_size": 12387,
+      "decompressed_size_estimated": 37161,
+      "sha256": "20f72f70e5c987c112a0c9dfaa2f6f9f661ed4092389b40a57ee173edd34ef28"
+    },
+    {
+      "language": "make",
+      "filename": "make.wasm.gz",
+      "compressed_size": 33939,
+      "decompressed_size_estimated": 101817,
+      "sha256": "88f3c958ced6e06e66f03f251b8612912c10e810220f7ac5f429a71a6971ef81"
+    },
+    {
+      "language": "matlab",
+      "filename": "matlab.wasm.gz",
+      "compressed_size": 60663,
+      "decompressed_size_estimated": 181989,
+      "sha256": "6f63e81e2feffff34667516af41df35f1ad7bf19fcbf5cfc3654b91696ae60fa"
+    },
+    {
+      "language": "nginx",
+      "filename": "nginx.wasm.gz",
+      "compressed_size": 17302,
+      "decompressed_size_estimated": 51906,
+      "sha256": "758de4aeb058f5fc43fbb67776b68640c1a8ec3aeec7fd29cfb748340a1aedbc"
+    },
+    {
+      "language": "nim",
+      "filename": "nim.wasm.gz",
+      "compressed_size": 676663,
+      "decompressed_size_estimated": 2029989,
+      "sha256": "58f87d18eff5dd92c5a21fa3ec7b95d8ac9023690d3eb8f0a4c73185843c178e"
+    },
+    {
+      "language": "nix",
+      "filename": "nix.wasm.gz",
+      "compressed_size": 16058,
+      "decompressed_size_estimated": 48174,
+      "sha256": "f93dc13e872612dac9a106474228b5fe1e503c9ff7f8be8896a27b53614a44e3"
+    },
+    {
+      "language": "objc",
+      "filename": "objc.wasm.gz",
+      "compressed_size": 282241,
+      "decompressed_size_estimated": 846723,
+      "sha256": "b9e8693904765bd10417a73b57316f7db3e0ec91056676aef4fc7ed89f0e7df2"
+    },
+    {
+      "language": "ocaml",
+      "filename": "ocaml.wasm.gz",
+      "compressed_size": 235588,
+      "decompressed_size_estimated": 706764,
+      "sha256": "46240a4ee244823cbd7fd18985760f60a128d9f282edccaeb1e93876683bc6d1"
+    },
+    {
+      "language": "org",
+      "filename": "org.wasm.gz",
+      "compressed_size": 46592,
+      "decompressed_size_estimated": 139776,
+      "sha256": "2e9c831f4b0384bb110f13888dd42d34ba96e362bfc8596d67e728e5885d99be"
+    },
+    {
+      "language": "pascal",
+      "filename": "pascal.wasm.gz",
+      "compressed_size": 129042,
+      "decompressed_size_estimated": 387126,
+      "sha256": "5b0bb29ce0f5a652bf23041351c9f1fa4fc46d88e56c5b6cd894be68315c84c8"
+    },
+    {
+      "language": "perl",
+      "filename": "perl.wasm.gz",
+      "compressed_size": 192793,
+      "decompressed_size_estimated": 578379,
+      "sha256": "0d3d007a11a1a61c1a32239df778760c7237e601cc83a8c18c8b2d645bff3da8"
+    },
+    {
+      "language": "php",
+      "filename": "php.wasm.gz",
+      "compressed_size": 106083,
+      "decompressed_size_estimated": 318249,
+      "sha256": "7b0fb39497562a9e1fb406533d36b53b6daaa4cd641c0a755474297bcbb37099"
+    },
+    {
+      "language": "powershell",
+      "filename": "powershell.wasm.gz",
+      "compressed_size": 95659,
+      "decompressed_size_estimated": 286977,
+      "sha256": "8f314ea3229e1b2274e924eb3b8dd382a7bb49d293ea1cc0f5834e4107b905b1"
+    },
+    {
+      "language": "prisma",
+      "filename": "prisma.wasm.gz",
+      "compressed_size": 8862,
+      "decompressed_size_estimated": 26586,
+      "sha256": "7e9872f2846846245e0fc275d4e74ab97361b13d743e0c84f47c4b9ea56844ac"
+    },
+    {
+      "language": "prolog",
+      "filename": "prolog.wasm.gz",
+      "compressed_size": 9050,
+      "decompressed_size_estimated": 27150,
+      "sha256": "af977a7f394427c6e4d634e3412c25aa49fd86cbca0c087bcb2ec56a2e577501"
+    },
+    {
+      "language": "proto",
+      "filename": "proto.wasm.gz",
+      "compressed_size": 12905,
+      "decompressed_size_estimated": 38715,
+      "sha256": "d534f0f3652084b10ece70d39d5a5ceaf53dc2fe9d2cdaf31742e7e81492a0a4"
+    },
+    {
+      "language": "psv",
+      "filename": "psv.wasm.gz",
+      "compressed_size": 2547,
+      "decompressed_size_estimated": 7641,
+      "sha256": "4cfa8e03245e69f385ea9ac243b24ceb3496f20e64d53b08e2317e8dd9d71034"
+    },
+    {
+      "language": "purescript",
+      "filename": "purescript.wasm.gz",
+      "compressed_size": 190280,
+      "decompressed_size_estimated": 570840,
+      "sha256": "0de449f20aea541edc4810c68b813f13bb3399d44170162145ebd00e21eb1227"
+    },
+    {
+      "language": "python",
+      "filename": "python.wasm.gz",
+      "compressed_size": 65378,
+      "decompressed_size_estimated": 196134,
+      "sha256": "cd715a16c90ed90265e6646091c579bb4d410390bc75684a9346aec4f3d0ceb4"
+    },
+    {
+      "language": "r",
+      "filename": "r.wasm.gz",
+      "compressed_size": 47521,
+      "decompressed_size_estimated": 142563,
+      "sha256": "606a205be299c8527cbcb5eca5318d7fcf1f395dbe9cfb82fb7115ddb60b44ea"
+    },
+    {
+      "language": "racket",
+      "filename": "racket.wasm.gz",
+      "compressed_size": 19413,
+      "decompressed_size_estimated": 58239,
+      "sha256": "f4921cd5c8b969fa3775a1d4a576792de8bfd8f1395ba36cae80f062893795f9"
+    },
+    {
+      "language": "reason",
+      "filename": "reason.wasm.gz",
+      "compressed_size": 131264,
+      "decompressed_size_estimated": 393792,
+      "sha256": "1341024e096b5b57d60dcd4171e3c2eb665ca5c76cc1e3fb382f0b8f7ac75522"
+    },
+    {
+      "language": "regex",
+      "filename": "regex.wasm.gz",
+      "compressed_size": 6192,
+      "decompressed_size_estimated": 18576,
+      "sha256": "4d5211f754e14e05bfdeb28d0691d962adef31fd5f9659c17b3477a2408299a6"
+    },
+    {
+      "language": "rescript",
+      "filename": "rescript.wasm.gz",
+      "compressed_size": 95598,
+      "decompressed_size_estimated": 286794,
+      "sha256": "4b743184f5434652f48eeb78c3080a13c1e04ce7bd972bbbadb6cacd4e81b7cc"
+    },
+    {
+      "language": "ruby",
+      "filename": "ruby.wasm.gz",
+      "compressed_size": 165557,
+      "decompressed_size_estimated": 496671,
+      "sha256": "4071d2948fb3df179328ade407486282b664db80680ac6509ad6d86fe6ea47cc"
+    },
+    {
+      "language": "rust",
+      "filename": "rust.wasm.gz",
+      "compressed_size": 115914,
+      "decompressed_size_estimated": 347742,
+      "sha256": "5ce780e6d9ec4d9ccfdb798cb20a7194614186ee7532e5948c40fc5a8f661f98"
+    },
+    {
+      "language": "scala",
+      "filename": "scala.wasm.gz",
+      "compressed_size": 473930,
+      "decompressed_size_estimated": 1421790,
+      "sha256": "734c80565f718b790954ccce96b7653a2e077dff9179815ad1f5faa94525069c"
+    },
+    {
+      "language": "scheme",
+      "filename": "scheme.wasm.gz",
+      "compressed_size": 18050,
+      "decompressed_size_estimated": 54150,
+      "sha256": "369c999d6d024c92b4634229b7fa750dccbcf85a16bc64f60fa28f97248e911f"
+    },
+    {
+      "language": "scss",
+      "filename": "scss.wasm.gz",
+      "compressed_size": 27669,
+      "decompressed_size_estimated": 83007,
+      "sha256": "d67d936cbc9d54ccacd38241aed88464862ecbc6de5874777137367ca07cb249"
+    },
+    {
+      "language": "solidity",
+      "filename": "solidity.wasm.gz",
+      "compressed_size": 46475,
+      "decompressed_size_estimated": 139425,
+      "sha256": "58d363616d1617b55557b77f6fc8ca9362af4dd19747e33f1684470783775a58"
+    },
+    {
+      "language": "stata",
+      "filename": "stata.wasm.gz",
+      "compressed_size": 10350,
+      "decompressed_size_estimated": 31050,
+      "sha256": "18a52ba4ad3b35b7c559227e260eeaff45ef98a3d09320aa92cb3af120b88086"
+    },
+    {
+      "language": "supercollider",
+      "filename": "supercollider.wasm.gz",
+      "compressed_size": 24419,
+      "decompressed_size_estimated": 73257,
+      "sha256": "f644d9fc146bad5b52f795c6a92ca151c2db3121f488a4eea1a0721ce8793a10"
+    },
+    {
+      "language": "svelte",
+      "filename": "svelte.wasm.gz",
+      "compressed_size": 13784,
+      "decompressed_size_estimated": 41352,
+      "sha256": "e89180a9b8a711e89b0e8010b2a9a730ee0a39e53499858a185dd4f1e37ef129"
+    },
+    {
+      "language": "swift",
+      "filename": "swift.wasm.gz",
+      "compressed_size": 27837,
+      "decompressed_size_estimated": 83511,
+      "sha256": "53fcab7e4e4fc2fb0154a854ec434f48faa142355765c72568a1b0593c54181c"
+    },
+    {
+      "language": "systemverilog",
+      "filename": "systemverilog.wasm.gz",
+      "compressed_size": 783987,
+      "decompressed_size_estimated": 2351961,
+      "sha256": "45ca6a0cffcacd7da29a5cc0059fda04c422a4c83d4700571141950681f3e480"
+    },
+    {
+      "language": "tcl",
+      "filename": "tcl.wasm.gz",
+      "compressed_size": 20972,
+      "decompressed_size_estimated": 62916,
+      "sha256": "586038cc700cb81acd0dad91c4add2a848d258147451e9ddedcc630e82aa2838"
+    },
+    {
+      "language": "toml",
+      "filename": "toml.wasm.gz",
+      "compressed_size": 7995,
+      "decompressed_size_estimated": 23985,
+      "sha256": "82e5ae955022d10349ab39091472407cdad91ce4e04499d9c3ddb6c39bb2a7e4"
+    },
+    {
+      "language": "tree-sitter-asciidoc",
+      "filename": "tree-sitter-asciidoc.wasm.gz",
+      "compressed_size": 51476,
+      "decompressed_size_estimated": 154428,
+      "sha256": "43eeade013f9fd613a0165707dc8a84dcca6627c808ff5658311b68c10eebea8"
+    },
+    {
+      "language": "tree-sitter-markdown-inline",
+      "filename": "tree-sitter-markdown-inline.wasm.gz",
+      "compressed_size": 63484,
+      "decompressed_size_estimated": 190452,
+      "sha256": "9a5c72264b29fd20a10c57794bdfb48709be97f9b7706aa91bc4633f1cf66f61"
+    },
+    {
+      "language": "tree-sitter-markdown",
+      "filename": "tree-sitter-markdown.wasm.gz",
+      "compressed_size": 61463,
+      "decompressed_size_estimated": 184389,
+      "sha256": "49679f17dcfb6ce5d2cdab913204026ab43dc720752eddf67e9ec5ce457e3a95"
+    },
+    {
+      "language": "tsv",
+      "filename": "tsv.wasm.gz",
+      "compressed_size": 2165,
+      "decompressed_size_estimated": 6495,
+      "sha256": "158bdc1bd5ce889d5fba16deb9226ba41459f7f5fb1fdeef674814637276c2b1"
+    },
+    {
+      "language": "tsx",
+      "filename": "tsx.wasm.gz",
+      "compressed_size": 137598,
+      "decompressed_size_estimated": 412794,
+      "sha256": "d1158c3af829791db3d683db44b679a0930ec42207c0cc5ff5b41f098012bdac"
+    },
+    {
+      "language": "typescript",
+      "filename": "typescript.wasm.gz",
+      "compressed_size": 134754,
+      "decompressed_size_estimated": 404262,
+      "sha256": "e8dcc5739974f51cf0503934e91520a2192df6473ed1ad841659edce48a5a6f9"
+    },
+    {
+      "language": "typst",
+      "filename": "typst.wasm.gz",
+      "compressed_size": 96378,
+      "decompressed_size_estimated": 289134,
+      "sha256": "86213ec468cf630a39ed19563e78f69459e0d8a3b08368664ac89a215b02d20e"
+    },
+    {
+      "language": "v",
+      "filename": "v.wasm.gz",
+      "compressed_size": 177995,
+      "decompressed_size_estimated": 533985,
+      "sha256": "ce48aa1b204092888b1494b4ba2b90bc0f3ec1f171779c9b708fed40ad05893f"
+    },
+    {
+      "language": "verilog",
+      "filename": "verilog.wasm.gz",
+      "compressed_size": 715474,
+      "decompressed_size_estimated": 2146422,
+      "sha256": "fd764c7e638c76b59ea9f0d2dcb21c1cbfb41cdcf3a41234b5b9bdf68a74c960"
+    },
+    {
+      "language": "vhdl",
+      "filename": "vhdl.wasm.gz",
+      "compressed_size": 160159,
+      "decompressed_size_estimated": 480477,
+      "sha256": "25c15cba7917ee8c82e1105f94232d545fe2a2384a3d4d90f06417906bf1482c"
+    },
+    {
+      "language": "vue",
+      "filename": "vue.wasm.gz",
+      "compressed_size": 9967,
+      "decompressed_size_estimated": 29901,
+      "sha256": "3ff525b2be9f3be1bb24612d512d3f4564aee25643294bee390662ca7d589da1"
+    },
+    {
+      "language": "xml",
+      "filename": "xml.wasm.gz",
+      "compressed_size": 16414,
+      "decompressed_size_estimated": 49242,
+      "sha256": "26b630a5c371c008b538a70bc8249f4cfa9a1a9a7bc70a48a6eff4bfb29b5adc"
+    },
+    {
+      "language": "yaml",
+      "filename": "yaml.wasm.gz",
+      "compressed_size": 34237,
+      "decompressed_size_estimated": 102711,
+      "sha256": "0613120293929474f12eade327e1091c0edf4399abf2a348081c83d699dd7e01"
+    },
+    {
+      "language": "zig",
+      "filename": "zig.wasm.gz",
+      "compressed_size": 75374,
+      "decompressed_size_estimated": 226122,
+      "sha256": "2e0bc5b7bc282d548719638c82422f0470c36dbfabb70b8479dff36f6c564831"
+    }
+  ]
+}
